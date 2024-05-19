@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polynomial Interpolation and Regression</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Polynomial Interpolation and Regression</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Lagrange Polynomial</h2>
+            <div class="input-section">
+                <label for="lagrange-points">Input Points (x, y):</label>
+                <textarea id="lagrange-points" rows="4" cols="50" placeholder="e.g., 1,2\n2,3\n3,5"></textarea>
+                <button onclick="computeLagrange()">Compute Lagrange Polynomial</button>
+            </div>
+            <div class="output-section">
+                <h3>Output Polynomial:</h3>
+                <p id="lagrange-result"></p>
+                <canvas id="lagrange-chart" width="400" height="400"></canvas>
+            </div>
+        </section>
+        <section>
+            <h2>Newton Polynomial</h2>
+            <div class="input-section">
+                <label for="newton-points">Input Points (x, y):</label>
+                <textarea id="newton-points" rows="4" cols="50" placeholder="e.g., 1,2\n2,3\n3,5"></textarea>
+                <button onclick="computeNewton()">Compute Newton Polynomial</button>
+            </div>
+            <div class="output-section">
+                <h3>Output Polynomial:</h3>
+                <p id="newton-result"></p>
+                <canvas id="newton-chart" width="400" height="400"></canvas>
+            </div>
+        </section>
+        <section>
+            <h2>Regression Analysis</h2>
+            <div class="input-section">
+                <label for="regression-points">Input Points (x, y):</label>
+                <textarea id="regression-points" rows="4" cols="50" placeholder="e.g., 1,2\n2,3\n3,5"></textarea>
+                <button onclick="computeRegression()">Compute Regression</button>
+            </div>
+            <div class="output-section">
+                <h3>Regression Results:</h3>
+                <canvas id="regression-chart" width="400" height="400"></canvas>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
